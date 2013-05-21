@@ -7,9 +7,11 @@
 //
 
 #import "PZDetailViewController.h"
+#import "PZImageWell.h"
 
 @interface PZDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (weak, nonatomic) IBOutlet PZImageWell *imageWell;
 - (void)configureView;
 @end
 
@@ -36,14 +38,15 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.imageWell.image = self.detailItem;
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    
     [self configureView];
 }
 

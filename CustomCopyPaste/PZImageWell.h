@@ -1,5 +1,5 @@
 //
-//  PZDetailViewController.h
+//  PZImageWell.h
 //  CustomCopyPaste
 //
 //  Created by Patrick Zearfoss on 3/28/13.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PZDetailViewController : UIViewController <UISplitViewControllerDelegate>
+// We're going to conform to
+// UIResponderStandardEditActions
+@interface PZImageWell : UIImageView 
 
-@property (strong, nonatomic) id detailItem;
+
 
 @end

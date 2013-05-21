@@ -20,6 +20,11 @@
 		26CFF6E617050F2400F76633 /* PZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFF6E517050F2400F76633 /* PZDetailViewController.m */; };
 		26CFF6E917050F2400F76633 /* PZMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CFF6E717050F2400F76633 /* PZMasterViewController.xib */; };
 		26CFF6EC17050F2500F76633 /* PZDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CFF6EA17050F2500F76633 /* PZDetailViewController.xib */; };
+		26CFF6F417050F5200F76633 /* PZImageWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFF6F317050F5200F76633 /* PZImageWell.m */; };
+		26CFF6F91705146400F76633 /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26CFF6F51705146400F76633 /* img1.jpg */; };
+		26CFF6FA1705146400F76633 /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26CFF6F61705146400F76633 /* img2.jpg */; };
+		26CFF6FB1705146400F76633 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26CFF6F71705146400F76633 /* img3.jpg */; };
+		26CFF6FC1705146400F76633 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26CFF6F81705146400F76633 /* img4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,12 @@
 		26CFF6E517050F2400F76633 /* PZDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZDetailViewController.m; sourceTree = "<group>"; };
 		26CFF6E817050F2400F76633 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PZMasterViewController.xib; sourceTree = "<group>"; };
 		26CFF6EB17050F2500F76633 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PZDetailViewController.xib; sourceTree = "<group>"; };
+		26CFF6F217050F5200F76633 /* PZImageWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZImageWell.h; sourceTree = "<group>"; };
+		26CFF6F317050F5200F76633 /* PZImageWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZImageWell.m; sourceTree = "<group>"; };
+		26CFF6F51705146400F76633 /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
+		26CFF6F61705146400F76633 /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
+		26CFF6F71705146400F76633 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
+		26CFF6F81705146400F76633 /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +108,8 @@
 				26CFF6E717050F2400F76633 /* PZMasterViewController.xib */,
 				26CFF6EA17050F2500F76633 /* PZDetailViewController.xib */,
 				26CFF6D017050F2300F76633 /* Supporting Files */,
+				26CFF6F217050F5200F76633 /* PZImageWell.h */,
+				26CFF6F317050F5200F76633 /* PZImageWell.m */,
 			);
 			path = CustomCopyPaste;
 			sourceTree = "<group>";
@@ -104,6 +117,10 @@
 		26CFF6D017050F2300F76633 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				26CFF6F51705146400F76633 /* img1.jpg */,
+				26CFF6F61705146400F76633 /* img2.jpg */,
+				26CFF6F71705146400F76633 /* img3.jpg */,
+				26CFF6F81705146400F76633 /* img4.jpg */,
 				26CFF6D117050F2300F76633 /* CustomCopyPaste-Info.plist */,
 				26CFF6D217050F2300F76633 /* InfoPlist.strings */,
 				26CFF6D517050F2400F76633 /* main.m */,
@@ -173,6 +190,10 @@
 				26CFF6E017050F2400F76633 /* Default-568h@2x.png in Resources */,
 				26CFF6E917050F2400F76633 /* PZMasterViewController.xib in Resources */,
 				26CFF6EC17050F2500F76633 /* PZDetailViewController.xib in Resources */,
+				26CFF6F91705146400F76633 /* img1.jpg in Resources */,
+				26CFF6FA1705146400F76633 /* img2.jpg in Resources */,
+				26CFF6FB1705146400F76633 /* img3.jpg in Resources */,
+				26CFF6FC1705146400F76633 /* img4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +208,7 @@
 				26CFF6DA17050F2400F76633 /* PZAppDelegate.m in Sources */,
 				26CFF6E317050F2400F76633 /* PZMasterViewController.m in Sources */,
 				26CFF6E617050F2400F76633 /* PZDetailViewController.m in Sources */,
+				26CFF6F417050F5200F76633 /* PZImageWell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
