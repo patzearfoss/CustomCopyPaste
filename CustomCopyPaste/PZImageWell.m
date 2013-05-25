@@ -7,6 +7,7 @@
 //
 
 #import "PZImageWell.h"
+#import "PZAppDelegate.h"
 
 @implementation PZImageWell
 
@@ -50,14 +51,20 @@
 
 - (void)copy:(id)sender
 {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    UIPasteboard *pasteboard = [UIPasteboard pasteboardWithName:pasteboardIdentifier create:NO];
     [pasteboard setImage:self.image];
 }
 
 - (void)paste:(id)sender
 {
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    UIPasteboard *pasteboard = [UIPasteboard pasteboardWithName:pasteboardIdentifier create:NO];
     if (pasteboard.image) self.image = pasteboard.image;
+}
+
+- (void)thumb:(id)sender
+{
+    UIImage *thumb = [self thumbnailFromImage:self.image];
+    [[UIPasteboard pasteboardWithName:pasteboardIdentifier create:NO] setImage:thumb];
 }
 
 - (void)handleLongPress:(UILongPressGestureRecognizer *)sender
@@ -68,10 +75,25 @@
     if (![menu isMenuVisible])
     {
         [self becomeFirstResponder];
+        UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:@"Copy Thumbnail" action:@selector(thumb:)];
+        menu.menuItems = @[item];
         [menu setTargetRect:self.frame inView:self.superview];
         [menu setMenuVisible:YES animated:YES];
     }
+}
+
+// http://beageek.biz/how-to-create-thumbnail-uiimage-xcode-ios/
+- (UIImage *)thumbnailFromImage:(UIImage *)source
+{
+    CGSize originalSize = source.size;
+    CGSize destSize = CGSizeMake(originalSize.width / 3, originalSize.height / 3);
     
+    UIGraphicsBeginImageContext(destSize);
+    [source drawInRect:(CGRect){CGPointZero, destSize}];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 @end

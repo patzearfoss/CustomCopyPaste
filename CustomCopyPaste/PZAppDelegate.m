@@ -12,6 +12,8 @@
 
 #import "PZDetailViewController.h"
 
+NSString *const pasteboardIdentifier = @"com.pzearfoss.customCopyPaste";
+
 @implementation PZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -31,6 +33,9 @@
     self.splitViewController.delegate = detailViewController;
     self.splitViewController.viewControllers = @[masterNavigationController, detailNavigationController];
     self.window.rootViewController = self.splitViewController;
+    
+    [UIPasteboard pasteboardWithName:pasteboardIdentifier create:YES];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
